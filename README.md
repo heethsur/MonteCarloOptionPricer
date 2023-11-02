@@ -11,7 +11,7 @@ Current feature set:
 - Quasi-random low-discrepancy Van der Corput sequence for generating random variables with improved variance
 - Offers choice of multithreading for faster execution
 
-* Control variate for European options is a delta-based control variate. All other options use underlying asset price as control variate.
+*Control variate for European options is a delta-based control variate. All other options use underlying asset price as control variate.
 
 Following developments are currently work in progress:
 - Improved control variate for option types other than European.
