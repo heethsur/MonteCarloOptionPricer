@@ -1,0 +1,121 @@
+.parentframe{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    background-color: darkslategray;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navframe{
+    display : flex;
+    flex-direction : column;
+    justify-content: center; 
+    align-items: center;
+    background-color : grey;
+    }
+
+.left{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    background-color: darkslategray;
+}  
+
+
+.row {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.label {
+    width: 150px; 
+    margin-right: 10px;
+    color: palegoldenrod; 
+}
+
+label{
+    color: cadetblue;
+}
+
+
+.right{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategray;
+    display: flex;
+}  
+
+.navbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 20px;
+    background-color: darkslategray;
+    margin: 10px;
+}
+
+.navbutton:hover{
+    background-color: cadetblue;
+    transition: background-color 500ms ease;
+    cursor: pointer;
+}
+
+.navbutton:active{
+    color: cadetblue;
+    background-color: white;
+    transition: background-color 500ms ease;
+
+}
+
+.subheader{
+    color: white;
+    font-size: 20px;
+}
+
+.resultstable{
+    position: relative;
+    width: 90%;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+tr{
+    background-color: cadetblue;
+    color: white;
+}
+
+tr:hover{
+    background-color: palegoldenrod;
+    color: darkslategrey;
+    transition: background-color 500ms ease,color 500ms ease;
+}
+
+td{
+    padding: 10px;
+}
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Simulator.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <style>
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24;
+              font-size: 72px;
+            }
+            </style>
+    </head>
+    <body>
+        <div class = "parentframe">
+            <div class = "left">
+                <div><span class="subheader">Option Parameters</span></div>
+                <div class="row">
+                    <div class="label">Option Type: </div>
+                    <select id="OptionType">
+                        <option>European</option>
+                        <option>Asian</option>
+                        <option>Digital</option>
+                        <option>Lookback</option>
+                        <option>Barrier</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="label">Exercise Type: </div>
+                    <input type="radio" id="call" name="Exercise" />
+                    <label for="call">Call</label>
+                    <input type="radio" id="put" name="Exercise" />
+                    <label for="put">Put</label>
+                </div>
+                <div class="row">
+                    <div class="label">Strike Price: </div>
+                    <input id="K" placeholder="Strike Price"/>
+                </div>
+                <div class="row">
+                    <div class="label">Start Date: </div>
+                    <input id="Start" type="date"/>
+                </div>
+                <div class="row">
+                    <div class="label">Expiration Date: </div>
+                    <input id="End" type="date"/>
+                </div>
+                <div class="row">
+                    <div id = "Plabel" class="label" style="display: none;">Payout Amount: </div>
+                    <input id="PayoutAmount" placeholder="Payout Amount" style="display: none;"/>
+                </div>
+                <div class="row">
+                    <div id = "BTypelabel" class="label" style="display: none;">Barrier Type: </div>
+                    <select id="BarrierType" style="display: none;">
+                        <option>Down-Out</option>
+                        <option>Down-In</option>
+                        <option>Up-Out</option>
+                        <option>Up-In</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div id = "BLevellabel" class="label" style="display: none;">Barrier Level: </div>
+                    <input id="BarrierLevel" placeholder="BarrierAmount" style="display: none;"/>
+                </div>
+                <div><span class="subheader">Other Parameters</span></div>
+                <div class="row">
+                    <div class="label">Spot Price: </div>
+                    <input id="S" placeholder="Underlying Price"/>
+                </div>
+                <div class="row">
+                    <div class="label">Volatility: </div>
+                    <input id="V" placeholder="Volatility"/>
+                </div>
+                <div class="row">
+                    <div class="label">Risk Free Rate: </div>
+                    <input id="R" placeholder="Risk Free Rate"/>
+                </div>
+                <div><span class="subheader">Simulation Settings</span></div>
+                    <div>
+                        <input type="checkbox" id="Antithetic" name="SimSettings">
+                        <label for="Antithetic">Antithetic Sampling</label>
+                        <input type="checkbox" id="ControlVariate" name="SimSettings">
+                        <label for="ControlVariate">Control Variate</label>
+                        <input type="checkbox" id="MultiThread" name="SimSettings">
+                        <label for="MultiThread">Multi-Threading</label>
+                    </div>             
+            </div> 
+            <div class="navframe">
+                <div id="simulate" class = "navbutton">
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </div>
+                <div id="refresh" class = "navbutton">
+                    <span class="material-symbols-outlined">
+                        refresh
+                    </span>
+                </div>
+            </div> 
+            <div class = "right">
+                <table class="resultstable">
+                    <tbody>
+                        <tr>
+                            <td>Price</td>
+                            <td id="Price">?</td>
+                        </tr>
+                        <tr>
+                            <td>Delta</td>
+                            <td id="Delta">?</td>
+                        </tr>
+                        <tr>
+                            <td>Gamma</td>
+                            <td id="Gamma">?</td>
+                        </tr>
+                        <tr>
+                            <td>Vega</td>
+                            <td id="Vega">?</td>
+                        </tr>
+                        <tr>
+                            <td>Rho</td>
+                            <td id="Rho">?</td>
+                        </tr>
+                        <tr>
+                            <td>Theta</td>
+                            <td id="Theta">?</td>
+                        </tr>
+                        <tr>
+                            <td>Std Error</td>
+                            <td id="StdError">?</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>      
+        </div>
+
+    </body>
+    <script src="Simulator.js"></script>
+</html>
