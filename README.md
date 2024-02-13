@@ -4,6 +4,7 @@ A MonteCarlo Options Pricing Implementation in C#.
 Takes option inputs and returns options price and associated greeks. 
 
 Current feature set:
+- A web API with interactive UI to access the pricer.
 - Prices European, Asian, Digital, Barrier, and Lookback options. (Put and Call)
 - Offers choice of variance reduction techniques that include:
     - Antithetic sampling
